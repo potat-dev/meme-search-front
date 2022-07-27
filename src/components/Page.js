@@ -9,6 +9,7 @@ function Page({ children }) {
       <div class="drawer-content flex flex-col">
         <Navbar />
         {children}
+        {/* TODO: <Footer /> */}
       </div>
       <Drawer />
     </div>

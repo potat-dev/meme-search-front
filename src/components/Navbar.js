@@ -1,4 +1,5 @@
 import React from 'react'
+import ThemeChange from './ThemeChange';
 
 function Navbar() {
   return (
@@ -32,7 +33,7 @@ function Navbar() {
         </ul>
       </div>
       <div class="navbar-end">
-        <a class="btn" href="/#">Test Button</a>
+        <ThemeChange />
       </div>
     </div>
   )

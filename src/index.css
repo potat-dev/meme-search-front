@@ -1,3 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+  }
+
+  .sm-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track,
+  .sm-scrollbar::-webkit-scrollbar-track {
+    background: hsl(var(--b1));
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb,
+  .sm-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--b1));
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    border: 5px solid hsl(var(--b1));
+    border-radius: var(--rounded-badge);
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--b3));
+  }
+}

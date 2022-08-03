@@ -3,8 +3,15 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
-  theme: {
-    extend: {},
+  plugins: [
+    require("@tailwindcss/typography"), 
+    require("daisyui"), 
+    require('tailwind-scrollbar')
+  ],
+  daisyui: {
+    themes: ["night", "winter", "synthwave", "cyberpunk"],
   },
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  variants: {
+    scrollbar: ['rounded']
+  }
 }

@@ -21,14 +21,19 @@ export default function Card({ id, images, text, score }) {
       </figure>
       <div class="card-body flex-row justify-between items-center">
         <div>
-          Score: <div class={badge_class}>{score}%</div>
+          <div class={badge_class}>{score}% match</div>
         </div>
-        <label for={modal_name} class="btn btn-sm btn-ghost normal-case gap-2">
-          Text
-          <Icon name="text" size="4" />
+        <label for={modal_name} class="btn btn-sm btn-ghost normal-case gap-1">
+          Tags
+          <Icon name="tag" className="h-5 w-5" />
         </label>
       </div>
-      <Modal name={modal_name} head="Keywords:" text={text} btnText="Close" />
+      <Modal
+        name={modal_name}
+        head="Keywords & Tags:"
+        text={text}
+        btnText="Close"
+      />
     </div>
   );
 }

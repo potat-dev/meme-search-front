@@ -2,6 +2,7 @@ import useFetch from "react-fetch-hook";
 import Page from "./components/Page";
 import Loading from "./components/Loading";
 import MansoryGrid from "./components/MansoryGrid";
+import Search from "./components/Search";
 
 import config from "./Config";
 
@@ -20,7 +21,8 @@ export default function App() {
   return (
     <div className="App">
       <Page>
-        <div class="flex justify-center overflow-y-scroll p-4 sm-scrollbar md:scrollbar">
+        <div className="justify-center overflow-y-scroll px-4 sm-scrollbar md:scrollbar">
+          <Search />
           <Loading isLoading={isLoading} error={error} />
           <MansoryGrid isLoading={isLoading} data={data} />
         </div>

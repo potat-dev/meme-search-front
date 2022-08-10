@@ -4,8 +4,8 @@
 
 @layer utilities {
   .scrollbar::-webkit-scrollbar {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
   }
 
   .sm-scrollbar::-webkit-scrollbar {
@@ -24,8 +24,11 @@
   }
 
   .scrollbar::-webkit-scrollbar-thumb {
-    border: 5px solid hsl(var(--b1));
-    border-radius: var(--rounded-badge);
+    border-left: 8px solid hsl(var(--b1));
+    border-top: 8px solid hsl(var(--b1));
+    border-bottom: 8px solid hsl(var(--b1));
+    border-radius: var(--rounded-badge) 0px 0px var(--rounded-badge);
+    /* border-radius: 4px 0px 0px 4px; */
   }
 
   .scrollbar::-webkit-scrollbar-thumb:hover {

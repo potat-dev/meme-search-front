@@ -1,6 +1,7 @@
 const config = {
   app_name: "Meme Search",
-  api_endpoint: "http://192.168.1.42:8000",
+  // api_endpoint: "http://192.168.1.42:8000",
+  api_endpoint: "http://localhost:8000",
   search_endpoint: "/search",
   themes: [
     { name: "Light", id: "winter", icon: "sun" },

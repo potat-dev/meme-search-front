@@ -4,9 +4,9 @@ import Drawer from './Drawer'
 
 function Page({ children }) {
   return (
-    <div class="drawer">
-      <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content flex flex-col">
+    <div className="drawer">
+      <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+      <div className="drawer-content flex flex-col">
         <Navbar />
         {children}
         {/* TODO: <Footer /> */}

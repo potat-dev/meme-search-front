@@ -9,20 +9,21 @@ function ThemeChange({ themes }) {
   // false parameter is required for react project
 
   return (
-    <div class="dropdown dropdown-end">
-      <label tabindex="0" class="btn btn-ghost rounded-btn">
-        <div class="hidden md:block normal-case mr-3">Theme</div>
+    <div className="dropdown dropdown-end">
+      <label tabIndex="0" className="btn btn-ghost rounded-btn">
+        <div className="hidden md:block normal-case mr-3">Theme</div>
         <Icon name="moon" />
       </label>
       <div
-        tabindex="0"
-        class="menu dropdown-content p-2 shadow bg-base-300 rounded-box w-52 mt-4"
+        tabIndex="0"
+        className="menu dropdown-content p-2 shadow bg-base-300 rounded-box w-52 mt-4"
       >
         {themes.map((theme) => {
           return (
             <a
+              key={theme.name}
               role="button"
-              class="btn btn-ghost gap-2 justify-start"
+              className="btn btn-ghost gap-2 justify-start normal-case"
               data-set-theme={theme.id}
               href="/#"
             >

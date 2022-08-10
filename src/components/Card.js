@@ -4,7 +4,7 @@ import Icon from "./Icon";
 
 export default function Card({ id, images, text, score }) {
   var modal_name = `modal-${id}`;
-  var badge_class = `badge ${
+  var badge_class = `badge badge-lg ${
     score === 100
       ? "badge-primary"
       : score >= 80
@@ -13,17 +13,20 @@ export default function Card({ id, images, text, score }) {
   }`;
 
   return (
-    <div key={text} class="card card-compact bg-base-300">
+    <div key={text} className="card card-compact bg-base-300">
       <figure>
-        <div class="rounded">
+        <div className="rounded">
           <img src={images[0]} alt="meme" />
         </div>
       </figure>
-      <div class="card-body flex-row justify-between items-center">
+      <div className="card-body flex-row justify-between items-center">
         <div>
-          <div class={badge_class}>{score}% match</div>
+          <div className={badge_class}>{score}% match</div>
         </div>
-        <label for={modal_name} class="btn btn-sm btn-ghost normal-case gap-1">
+        <label
+          htmlFor={modal_name}
+          className="btn btn-sm btn-ghost normal-case gap-1.5"
+        >
           Tags
           <Icon name="tag" className="h-5 w-5" />
         </label>

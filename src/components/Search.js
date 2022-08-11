@@ -1,5 +1,6 @@
 import React from "react";
 import Icon from "./Icon";
+import SettingsModal from "./SettingsModal";
 
 export default function Search() {
   return (
@@ -10,13 +11,14 @@ export default function Search() {
         placeholder="Search for memes..."
         className="input input-bordered w-full max-w-lg focus:outline-none"
       />
-      <button className="btn gap-2 normal-case">
+      <label htmlFor="modal-settings" className="btn gap-2 normal-case">
         <Icon name="settings" className="h-5 w-5" />
-      </button>
+      </label>
       <button className="btn btn-primary gap-2 normal-case">
-        Search
+        <div className="hidden sm:flex">Search</div>
         <Icon name="search" className="h-5 w-5" />
       </button>
+      <SettingsModal id="modal-settings" />
     </div>
   );
 }

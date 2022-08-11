@@ -34,4 +34,21 @@
   .scrollbar::-webkit-scrollbar-thumb:hover {
     background: hsl(var(--b3));
   }
+  
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  /* to fix not pixel-perfect button group */
+  .btn-group:not(.btn-group-vertical) > .btn:not(:first-of-type) {
+    margin-left: 0px;
+  }
 }
